@@ -78,6 +78,16 @@ Os arquivos de rota estão em `src/routes/`.
 - `get-course-by-id.ts` — `GET /courses/:id` — retorna um curso por ID.
 - `create-courses.ts` — `POST /courses` — cria um novo curso.
 
+## Diagrama da rota principal
+
+```mermaid
+flowchart LR
+  Client[Cliente] -->|GET /courses| Server[Fastify Server]
+  Server -->|Consulta| DB[(Banco de Dados - Postgres / Drizzle)]
+  DB -->|Rows / Resultado| Server
+  Server -->|200 OK (JSON)| Client
+```
+
 Exemplo de requisição para criar um curso:
 
 ```bash
