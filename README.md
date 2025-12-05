@@ -1,4 +1,4 @@
-# First API
+# Studies Fastify
 
 > API simples em Node.js com TypeScript, Fastify e Drizzle ORM — projeto de estudo.
 
